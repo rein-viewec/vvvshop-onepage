@@ -626,6 +626,15 @@
         -webkit-line-clamp: 2;
         font-size: 1.1rem;
       }
+      .title__link {
+        text-decoration: unset;
+        color: #333333;
+      }
+      .title__link:hover {
+        text-decoration: unset;
+        color: #333333;
+        opacity: .85;
+      }
     </style>
     <script>
       const itemBaseLink = 'https://vvvshop.com.tw/products/display/'
@@ -647,7 +656,7 @@
             </a>
           `
           p.children[1].children[0].innerHTML = `
-            <a href="${itemBaseLink}${item_number}" target="_blank" style="text-decoration: unset; color: #333333;">
+            <a href="${itemBaseLink}${item_number}" target="_blank" class="title__link">
                 ${contentTitle}
             </a>
           `
