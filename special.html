@@ -670,11 +670,11 @@
         color: #333333;
         opacity: 0.85;
       }
-      .section-title p{
-        display: none
+      .section-title p {
+        display: none;
       }
-      .section01 img{
-        width: 100%
+      .section01 img {
+        width: 100%;
       }
       /* User age confirm Light box */
       .light__box {
@@ -743,12 +743,6 @@
       )
       confirmNo.addEventListener('click', () => {
         location.href = 'https://vvvshop.com.tw/'
-        // console.warn(window)
-        // if (window.history.length === 1) {
-        //   location.href = 'https://vvvshop.com.tw/'
-        //   return
-        // }
-        // window.history.back()
       })
     </script>
     <script>
@@ -756,21 +750,17 @@
       document.addEventListener('DOMContentLoaded', () => {
         const products = document.querySelectorAll('.single-product')
         products.forEach((p, i) => {
-          const contentImage = JSON.parse(
-            JSON.stringify(p.querySelector('.pro-img').innerHTML),
-          )
+          const image = p.querySelector('.pro-img')
+          const title = p.getElementsByTagName('h4')[0]
           const item_number = p.querySelector('.add-cart-onepage').dataset.id
-          const contentTitle = JSON.parse(
-            JSON.stringify(p.getElementsByTagName('h4')[0].innerHTML),
-          )
-          p.children[0].innerHTML = `
+          image.innerHTML = `
             <a href="${itemBaseLink}${item_number}" target="_blank">
-                ${contentImage}
+              ${image.innerHTML}
             </a>
           `
-          p.children[1].children[0].innerHTML = `
+          title.innerHTML = `
             <a href="${itemBaseLink}${item_number}" target="_blank" class="title__link">
-                ${contentTitle}
+              ${title.innerHTML}
             </a>
           `
         })
