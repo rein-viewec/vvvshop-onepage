@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Onepage 測試</title>
     <link
       rel="stylesheet"
       href="https://vvvshop.com.tw/asset/types/main/js/Freeow/style/freeow/freeow.css"
@@ -749,6 +749,9 @@
         flex: 0 0 66.666666%;
         width: 100%;
       }
+      footer .copyright {
+        margin: 14px 0;
+      }
       @media screen and (max-width: 768px) {
         footer .col-md-4:nth-child(3) {
           max-width: unset !important;
@@ -821,11 +824,16 @@
       confirmYes.addEventListener('click', () =>
         LightBox.classList.add('light__box__hide'),
       )
-      confirmNo.addEventListener('click', () => {
-        location.href = 'https://vvvshop.com.tw/'
-      })
+      confirmNo.addEventListener(
+        'click',
+        () => (location.href = 'https://vvvshop.com.tw/'),
+      )
     </script>
     <script>
+      const content = `
+        本店舖「日安優物」提供為消費者客製化代購國外商品之服務，商品皆係依照消費者要求，代為訂購國外商品。本店鋪將於收到完成付款之訂單後，代台灣消費者向國外商家訂購商品，再協助台灣消費者將訂購商品寄回台灣。經國外境內配送／兩地海關／台灣本島境內配送。為完成商品訂購及配送，您的訂單及配送資料將提供給國外商家及物流業者進行必要之處理、利用，詳細個人資料告知事項請參本公司。
+        <br><br>「依消費者要求所為之客製化給付」，屬中華民國消費者保護法第十九條第一項但書所稱合理例外情事之規定，故不適用商品鑑賞期（即消費者保護法第十九條第一項之解除權），除為本身商品內容錯誤異常或有非人為因素所致之商品損毀、刮傷（例如：配送的訂單內容與實際訂單內容不符合、商品本體有刮傷等）、或商品毀損或不完整的情形，才能進行退貨申請。綜上說明，若非前述情形，無法進行退貨作業，敬請見諒。運送過程中外盒難免會有痕跡，如您介意請再次考量是否可接受。
+        `
       const itemBaseLink = 'https://vvvshop.com.tw/products/display/'
       document.addEventListener('DOMContentLoaded', () => {
         const products = document.querySelectorAll('.single-product')
@@ -844,10 +852,6 @@
             </a>
           `
         })
-        const content = `
-        本店舖「日安優物」提供為消費者客製化代購國外商品之服務，商品皆係依照消費者要求，代為訂購國外商品。本店鋪將於收到完成付款之訂單後，代台灣消費者向國外商家訂購商品，再協助台灣消費者將訂購商品寄回台灣。經國外境內配送／兩地海關／台灣本島境內配送。為完成商品訂購及配送，您的訂單及配送資料將提供給國外商家及物流業者進行必要之處理、利用，詳細個人資料告知事項請參本公司。
-        <br><br>「依消費者要求所為之客製化給付」，屬中華民國消費者保護法第十九條第一項但書所稱合理例外情事之規定，故不適用商品鑑賞期（即消費者保護法第十九條第一項之解除權），除為本身商品內容錯誤異常或有非人為因素所致之商品損毀、刮傷（例如：配送的訂單內容與實際訂單內容不符合、商品本體有刮傷等）、或商品毀損或不完整的情形，才能進行退貨申請。綜上說明，若非前述情形，無法進行退貨作業，敬請見諒。運送過程中外盒難免會有痕跡，如您介意請再次考量是否可接受。
-        `
         const footerContent = document.querySelectorAll('.footer-content')[2]
         footerContent.innerHTML = content
       })
