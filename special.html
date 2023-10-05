@@ -639,6 +639,12 @@
         </div>
       </div>
     </div>
+
+    <div class="bottom__warning">
+      <div class="bottom__warning__banner">
+        <img src="https://vvvshop.com.tw/userfiles/shop-1/image/MicrosoftTeams-image.png" alt="">
+      </div>
+    </div>
     <footer>
       <div class="footer">
         <div class="container">
@@ -815,6 +821,30 @@
       }
       .light__box__hide {
         display: none;
+      }
+      /* Bottom warning banner */
+      .bottom__warning {
+        right: 0px;
+        left: 0px;
+        position: fixed;
+        width: 100%;
+        /* max-width: 1200px; */
+        margin: 0 auto;
+        bottom: 0px;
+        z-index: 99;
+        background-color: #000000;
+        display: flex;
+        justify-content: center;
+      }
+      .bottom__warning .bottom__warning__banner {
+        width: 100%;
+        max-width: 1200px;
+      }
+      .bottom__warning .bottom__warning__banner img {
+        width: 100%;
+      }
+      footer .copyright {
+        margin: 14px 0 60px;
       }
     </style>
     <script>
