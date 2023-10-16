@@ -715,13 +715,14 @@
         font-weight: bold;
         color: #f42c2c;
       }
-      .pro-content h4 {
-        height: 44px;
+      .pro-content h4 a{
+        height: 66px;
+        line-height: 1.5rem;
+        font-size: 1.1rem;
         overflow-y: hidden;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        font-size: 1.1rem;
+        -webkit-line-clamp: 3;
       }
       .title__link {
         text-decoration: unset;
@@ -752,10 +753,46 @@
       footer .copyright {
         margin: 14px 0;
       }
+      @media screen and (max-width: 1200px) {
+        .single-product .number-input  {
+          margin-top: 0px !important;
+        }
+      }
       @media screen and (max-width: 768px) {
+        .single-product {
+          padding: 6px;
+        }
+        .pro-content {
+          padding: 6px;
+        }
+        .pro-content h4 {
+          height: 56px;
+        }
+        .pro-content h4 a {
+          font-size: 14px;
+          -webkit-line-clamp: 3;
+        }
+        .form-control .number-input .add_cart_num {
+          margin-top: 0px !important;
+        }
+        .pro-content .row {
+          margin-bottom: 0 !important;
+        }
+        .quantity-onepage i {
+          padding: 8px;
+          margin: 0;
+        }
+        .input-group {
+          font-size: 12px;
+        }
         footer .col-md-4:nth-child(3) {
           max-width: unset !important;
           flex: unset;
+        }
+      }
+      @media screen and (max-width: 555px) {
+        .single-product .number-input  {
+          margin-top: 0px !important;
         }
       }
       /* User age confirm Light box */
